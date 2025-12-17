@@ -7,3 +7,26 @@ import com.example.demo.entity.StudentEntity;
 public interface StudentRepo extends JpaRepository<StudentEntity,Integer>{
         
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
