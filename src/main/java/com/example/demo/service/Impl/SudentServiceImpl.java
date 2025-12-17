@@ -15,7 +15,7 @@ public class StudentServiceImpl implements StudentService{
     // exisById()
     @Override
     public StudentEntity postData(StudentEntity stu){
-        return student.save(stu);
+        return repo.save(stu);
     }
 
 }
