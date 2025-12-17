@@ -7,6 +7,12 @@ public class StudentEntity{
     private String email;
     private String password;
     private Date created;
+    public Integer getId(){
+        return id;
+    }
+    public void setId(Integer id){
+        this.id=id;
+    }
     public String getUsername(){
         return name;
     }
@@ -23,6 +29,13 @@ public class StudentEntity{
         return password;
     }
     public void setPassword(String password){
-        this.
+        this.password=password;
     }
+    public Date getCreated(){
+        return created;
+    }
+    public void setCreated(Date created){
+        this.created=created;
+    }
+    
 }
