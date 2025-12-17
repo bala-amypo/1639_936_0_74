@@ -8,4 +8,5 @@ public class StudentController{
     @Autowired StudentService ser;
 
     @postMapping("\post")
+    public StudentEntity sendData(@RequestBody )
 }
