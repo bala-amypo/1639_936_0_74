@@ -3,5 +3,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class StudentServiceImpl implements StudentService{
-     StudentEntity postData(StudentEntity stu)
+    @Autowired StudentRepo repo;
+
+    public StudentEntity postData(StudentEntity stu){
+
+    }
 }
