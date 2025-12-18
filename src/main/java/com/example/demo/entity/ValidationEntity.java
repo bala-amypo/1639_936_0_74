@@ -59,7 +59,9 @@ public class ValidationEntity{
         this.email=email;
         this.password=password;
         this.age=age;
-        }
+    }
+    public ValidationEntity(){
+        
     }
 }
 
