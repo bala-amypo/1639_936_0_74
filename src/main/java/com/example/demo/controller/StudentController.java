@@ -31,4 +31,6 @@ public class StudentController{
     public StudentEntity getdata(@PathVariable int id){
         return ser.getData(id);
     }
+    @UpdateMapping("/update{id}")
+    public StudentEntity upda
 }
