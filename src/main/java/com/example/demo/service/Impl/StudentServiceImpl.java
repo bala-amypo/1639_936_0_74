@@ -27,5 +27,8 @@ public class StudentServiceImpl implements StudentService{
         repo.deleteById(id);
         return "Deleted Successfully";
     }
-    
+    @Override
+    public String getData(int id){
+        return repo.findById(id);
+    }
 }

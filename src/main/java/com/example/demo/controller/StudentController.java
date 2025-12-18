@@ -27,4 +27,6 @@ public class StudentController{
     public String deleteData(@PathVariable int id){
         return ser.DeleteData(id);
     }
+    @FindMapping("/find/{id}")
+    public 
 }
