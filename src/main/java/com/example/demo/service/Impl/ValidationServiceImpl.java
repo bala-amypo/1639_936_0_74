@@ -15,24 +15,24 @@ public class ValidationServiceImpl implements ValidationService{
     // deleteById()
     // exisById()
     @Override
-    public VEntity postData(StudentEntity stu){
+    public ValidationEntity postData(ValidationEntity stu){
         return repo.save(stu);
     }
     @Override
-    public List<StudentEntity>getAllData(){
+    public List<ValidationEntity>getAllData(){
         return repo.findAll();
     }
     @Override
-    public String DeleteData(int id){
+    public String DeleteData(Long id){
         repo.deleteById(id);
         return "Deleted Successfully";
     }
     @Override
-    public StudentEntity getData(int id){
+    public ValidationEntity getData(Long id){
         return repo.findById(id).orElse(null);
     }
     @Override
-    public StudentEntity updateData(int id,StudentEntity entity){
+    public ValidationEntity updateData(int id,ValidationEntity entity){
         if(repo.existsById(id)){
             entity.setId(id);
             return repo.save(entity);
