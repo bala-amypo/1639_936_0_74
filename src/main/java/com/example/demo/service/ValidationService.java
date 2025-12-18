@@ -1,10 +1,17 @@
-package com.example.demo.service;
-import java.util.List;
+package com.example.demo.service.impl;
+import java.util.*;
+import com.example.demo.service.ValidationService;
+import com.example.demo.repository.ValidationRepo;
 import com.example.demo.entity.ValidationEntity;
-public interface ValidationService{
-    ValidationEntity postData1(ValidationEntity val);
-    // List<ValidationEntity>getAllData();
-    // String DeleteData(Long id);
-    // ValidationEntity getData(Long id);
-    // ValidatiomEntity updateData(int id,ValidationEntity entity);
-} 
+import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+
+@Service
+public class ValidationServiceImpl implements ValidationService{
+     @Autowired ValidationRepo dent;
+     
+          @Override
+          public ValidationEntity post(ValidationEntity stu){
+               return dent.save(stu);
+          }
+}

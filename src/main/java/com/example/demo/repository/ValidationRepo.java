@@ -1,10 +1,8 @@
-package com.example.demo.service;
-import java.util.List;
+package com.example.demo.repository;
 import com.example.demo.entity.ValidationEntity;
-public interface ValidationService{
-    ValidationEntity postData(ValidationEntity val);
-    List<ValidationEntity>getAllData();
-    String DeleteData(Long id);
-    ValidationEntity getData(Long id);
-    ValidatiomEntity updateData(int id,ValidationEntity entity);
-} 
+import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
+@Repository
+public interface ValidationRepo extends JpaRepository<ValidationEntity,Long>{
+
+}
