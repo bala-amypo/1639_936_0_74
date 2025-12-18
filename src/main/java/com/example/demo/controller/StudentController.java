@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
 import java.util.List;
 
 
@@ -31,6 +32,8 @@ public class StudentController{
     public StudentEntity getdata(@PathVariable int id){
         return ser.getData(id);
     }
-    @UpdateMapping("/update{id}")
-    public StudentEntity upda
+    @PutMapping("/put/{id}")
+    public StudentEntity putdata(int id,@RequestBody StudentEntity entity){
+        return ser.putData(id);
+    }
 }
