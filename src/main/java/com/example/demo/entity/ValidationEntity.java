@@ -1,8 +1,3 @@
-
-727824TUCS244 NELJOE BECKHAM X <727824tucs244@skct.edu.in>
-2:48 PM (0 minutes ago)
-to 727824tucs208, 727824tucs242
-
 package com.example.demo.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
