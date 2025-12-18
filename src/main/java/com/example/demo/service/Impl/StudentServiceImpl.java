@@ -29,6 +29,6 @@ public class StudentServiceImpl implements StudentService{
     }
     @Override
     public String getData(int id){
-        return repo.findById(id);
+        return repo.findById(id).orElse({null});
     }
 }
