@@ -33,7 +33,7 @@ public class StudentServiceImpl implements StudentService{
     }
     @Override
     public StudentEntity updateData(int id,StudentEntity entity){
-        if(repo.existById(id)){
+        if(repo.existsById(id)){
             entity.setId(id);
             return repo.save(entity);
         }
