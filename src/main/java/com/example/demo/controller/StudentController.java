@@ -33,7 +33,7 @@ public class StudentController{
         return ser.getData(id);
     }
     @PutMapping("/put/{id}")
-    public StudentEntity putdata(int id,@RequestBody StudentEntity entity){
-        return ser.putData(id);
+    public StudentEntity putdata(@PathVariable int id,@RequestBody StudentEntity entity){
+        return ser.updateData(id,entity);
     }
 }
