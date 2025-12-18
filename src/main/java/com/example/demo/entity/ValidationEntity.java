@@ -45,10 +45,13 @@ public class ValidationEntity{
         this.password=password;
     }
     public Integer getAge(){
-        return created;
+        return age;
     }
-    public void setCreated(Date created){
-        this.created=created;
+    public void setAge(Integer age){
+        this.age=age;
+    }
+    public ValidationEntity(Long id,@NotNull @Size(min=2,max=10,message="must be 2 to 10 character")
+
     }
 }
 
