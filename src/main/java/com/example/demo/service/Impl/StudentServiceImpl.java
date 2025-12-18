@@ -22,5 +22,5 @@ public class StudentServiceImpl implements StudentService{
     public List<StudentEntity>getAllData(){
         return repo.findAll();
     }
-
+    
 }
