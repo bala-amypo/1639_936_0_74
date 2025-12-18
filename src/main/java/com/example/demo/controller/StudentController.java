@@ -21,4 +21,5 @@ public class StudentController{
     public List<StudentEntity>getval(){
         return ser.getAllData();
     }
+    @Delete
 }

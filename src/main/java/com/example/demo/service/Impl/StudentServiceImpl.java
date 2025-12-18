@@ -22,5 +22,9 @@ public class StudentServiceImpl implements StudentService{
     public List<StudentEntity>getAllData(){
         return repo.findAll();
     }
-    
+    @Override
+    public String DeleteData(int id){
+        repo.deleteById(id);
+        return "Deleted Successfully";
+    }
 }
