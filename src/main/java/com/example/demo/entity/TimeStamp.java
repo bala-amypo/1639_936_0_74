@@ -23,8 +23,10 @@ public class TimeStamp{
     @PrePersist
     public void Oncreate(){
         LocalDateTime now=new LocalDateTime();
+        this.createAt=now;
+        this.updateAt=now;
     }
-
+    @PreUpdate
 
     public Long getId(){
         return id;
