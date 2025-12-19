@@ -15,5 +15,8 @@ class ValidationController{
     public ValidationEntity sendData(@Valid @RequestBody ValidationEntity stu){
         return serve.post(stu);
     }
-    public ValidationEntity get
+    @GetMapping("/s/{id}")
+    public ValidationEntity get(@PathVariable Long id){
+        return serve.getById(id); 
+    }
 }
