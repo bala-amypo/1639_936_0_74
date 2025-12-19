@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 @RestController
 public class TimeStampController{
     @Autowired TimeStampService serv;
-    @PostMapping("/post")
+    @PostMapping("/postDa")
     public TimeStamp sendData(@RequestBody TimeStamp stu){
         return serv.postData(stu);
     }
