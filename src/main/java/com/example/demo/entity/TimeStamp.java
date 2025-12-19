@@ -45,11 +45,19 @@ public class TimeStamp{
     public LocalDateTime getCreateAt(){
         return createAt;
     }
-    public LocalDateTime
+    public void setCreateAt(LocalDateTime createAt){
+        this.createAt=createAt;
+    }
+    public LocalDateTime getUpdateAt(){
+        return updateAt;
+    }
+    public void setUpdateAt(LocalDateTime updateAt){
+        this.updateAt=updateAt;
+    }
     public TimeStamp(){
 
     } 
-    public TimeStamp(Integer id,String name,String password,String email,Date created){
+    public TimeStamp(Integer id,String name,String password,String email,LocalDateTime created,LocalDateTime ){
         this.id=id;
         this.name=name;
         this.password=password;
