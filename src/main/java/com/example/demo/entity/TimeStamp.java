@@ -20,5 +20,5 @@ public class TimeStamp{
     private String email;
     private String password;
     private LocalDateTime createAt;
-    private LocalDAteTime updateAt;
+    private LocalDateTime updateAt;
 }
