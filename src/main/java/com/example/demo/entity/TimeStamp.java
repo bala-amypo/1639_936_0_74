@@ -4,7 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.Prepersist;
+import jakarta.persistence.PrePersist;
+import jakarta.persistence.PreUpdate;
 import java.time.LocalDateTime;
 
 
@@ -27,6 +28,9 @@ public class TimeStamp{
         this.updateAt=now;
     }
     @PreUpdate
+    public void Onupdate(){
+        this.updateAt=now;
+    }
 
     public Long getId(){
         return id;
