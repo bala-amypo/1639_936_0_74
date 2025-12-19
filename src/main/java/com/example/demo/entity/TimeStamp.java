@@ -22,17 +22,19 @@ public class TimeStamp{
     private LocalDateTime updateAt;
 
     @PrePersist
-    public void Oncreate(){
-        LocalDateTime now=LocalDateTime.now();
-        if(this.createAt
-        this.createAt = now;
+    public void onCreate() {
+        LocalDateTime now = LocalDateTime.now();
+        if (this.createAt == null) {
+            this.createAt = now;  
+        }
         this.updateAt = now;
     }
-    @PreUpdate
-    public void Onupdate(){
-        this.updateAt=now;
-    }
 
+ 
+    @PreUpdate
+    public void onUpdate() {
+        this.updateAt = LocalDateTime.now();
+    }
     public Long getId(){
         return id;
     }
