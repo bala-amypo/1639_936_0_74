@@ -9,7 +9,7 @@ import com.example.demo.entity.ValidationEntity;
 import com.example.demo.service.ValidationService;
 import jakarta.validation.Valid;
 @RestController
-000000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111.0..public class ValidationController{
+class ValidationController{
     @Autowired ValidationService serve;
     @PostMapping("/data")
     public ValidationEntity sendData(@Valid @RequestBody ValidationEntity stu){
