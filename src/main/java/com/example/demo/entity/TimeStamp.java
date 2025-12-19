@@ -13,7 +13,6 @@ import java.time.LocalDateTime;
 public class TimeStamp{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @PrePersist
     private Long id;
     private String name;
     private String email;
@@ -21,7 +20,13 @@ public class TimeStamp{
     private LocalDateTime createAt;
     private LocalDateTime updateAt;
 
-     public Long getId(){
+    @PrePersist
+    public void Oncreate(){
+        LocalDateTime now=new LocalDateTime();
+    }
+
+
+    public Long getId(){
         return id;
     }
     public void setId(Long id){
