@@ -12,7 +12,7 @@ public class ValidationServiceImpl implements ValidationService{
      @Autowired ValidationRepo dent;
      @Override
      public ValidationEntity post(ValidationEntity stu){ 
-          return dent.save(stu);
+          return dent.save(stu); 
      }
      @Override
      public ValidationEntity getById(Long id){
