@@ -5,7 +5,7 @@ import com.example.demo.repository.ValidationRepo;
 import com.example.demo.entity.ValidationEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.example.demo.exception.
+import com.example.demo.exception.ValidationException;
 
 @Service
 public class ValidationServiceImpl implements ValidationService{
@@ -16,6 +16,6 @@ public class ValidationServiceImpl implements ValidationService{
      }
      @Override
      public ValidationEntity getById(Long id){
-          return dent.findById(id).orElse(other:null);
+          return dent.findById(id).orElseThrow(()-> new ValidationException("Invalid Id"+id));
      }
 }

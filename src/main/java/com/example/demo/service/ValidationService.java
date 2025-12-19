@@ -3,7 +3,7 @@ import com.example.demo.entity.ValidationEntity;
 import java.util.*;
 public interface ValidationService{
     ValidationEntity post(ValidationEntity stu);
-    List<ValidationEntity> getById(Long id);
+    ValidationEntity getById(Long id);
 
 
 }
