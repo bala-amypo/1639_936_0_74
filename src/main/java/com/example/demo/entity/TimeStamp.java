@@ -58,7 +58,7 @@ public class TimeStamp{
     public TimeStamp(){
 
     } 
-    public TimeStamp(Integer id,String name,String password,String email,LocalDateTime createAt,LocalDateTime updateAt){
+    public TimeStamp(Long id,String name,String password,String email,LocalDateTime createAt,LocalDateTime updateAt){
         this.id=id;
         this.name=name;
         this.password=password;
