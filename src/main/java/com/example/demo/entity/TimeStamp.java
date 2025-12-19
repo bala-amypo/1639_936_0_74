@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Prepersist;
 import java.time.LocalDateTime;
 
 
@@ -12,6 +13,7 @@ import java.time.LocalDateTime;
 public class TimeStamp{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @PrePersist
     private Long id;
     private String name;
     private String email;
