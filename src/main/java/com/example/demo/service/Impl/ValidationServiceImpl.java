@@ -9,13 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Service
 public class ValidationServiceImpl implements ValidationService{
      @Autowired ValidationRepo dent;
-     
-          @Override
-          public ValidationEntity post(ValidationEntity stu){
-               return dent.save(stu);
-          }
-          @Override
-          public ValidationEntity getById(Long id){
-               return dent.findById(id).orElseThrow(ValidationException val8i);
-          }
+     @Override
+     public ValidationEntity post(ValidationEntity stu){ 
+          return dent.save(stu);
+     }
+     @Override
+     public ValidationEntity getById(Long id){
+          return dent.findById(id).orElseThrow(()->new ValidationException(null));
+     }
 }
